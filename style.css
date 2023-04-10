@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-weight: normal;
+    color: #e1b382;
+    box-sizing: border-box;
+    font-family: 'Changa', sans-serif;
+    font-size: 28px;
+}
+
+body {
+	background: linear-gradient(-45deg, #e1b382, #396a76, #192e34, #488696, #e1b382);
+	background-size: 400% 400%;
+	animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.calculator-grid {
+    width: 405px;
+    height: 640px;
+    margin: 100px auto;
+    display: grid;
+    justify-content: center;
+    gap: 22px;
+    align-content: center;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 60px);
+    border-radius: 38px;
+    background: #2d545e;
+    box-shadow: inset 5px 5px 6px #122226,
+            inset -5px -5px 6px #488696;
+}
+
+.calculator-grid>button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    background: #2d545e;
+    box-shadow:  5px 5px 21px #213e46,
+                 -5px -5px 21px #396a76;
+}
+
+.calculator-grid>button:hover {
+    background-color: #3a6e7b;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #305a65, #294c55);
+    box-shadow:  17px 17px 34px #192e34,
+             -17px -17px 34px #417a88;
+}
+
+.output .previous-operand {
+    font-size: 20px;
+}
